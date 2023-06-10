@@ -2,11 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import models from './assets/ring.gltf'
 
 function App() {
   const canvasRef = useRef();
-  const gltfUrl = './src/assets/ring.gltf';
-
 
   useEffect(() => {
     let scene, camera, renderer;
@@ -20,7 +19,7 @@ function App() {
 
       // Load and display the model
       const loader = new GLTFLoader();
-      loader.load(gltfUrl, function (gltf) {
+      loader.load(models, function (gltf) {
         const model = gltf.scene;
         scene.add(model);
       });
