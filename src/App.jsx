@@ -6,8 +6,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 function App() {
   const canvasRef = useRef();
-  const gltfUrl = 'https://www.dropbox.com/s/jb8yx06dcehaxuk/ring.gltf?dl=0';
-
+  const gltfUrl = '/assets/ring.gltf';
 
   useEffect(() => {
     let scene, camera, renderer;
